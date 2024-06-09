@@ -1,0 +1,301 @@
+{
+  "Customers": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a3e"},
+      "first_name": "Peter",
+      "last_name": "Parker",
+      "age": 18,
+      "gender": "Male",
+      "email": "peter.parker@dailybugle.com",
+      "phone": "555-1234",
+      "fax": "555-5678",
+      "address": {
+        "street": "20 Ingram Street",
+        "postal_code": "11375",
+        "city": "Forest Hills",
+        "region": {
+          "region_name": "New York",
+          "state": {
+            "state_name": "NY"
+          }
+        }
+      }
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a3f"},
+      "first_name": "Tony",
+      "last_name": "Stark",
+      "age": 45,
+      "gender": "Male",
+      "email": "tony.stark@starkindustries.com",
+      "phone": "555-9876",
+      "fax": "555-4321",
+      "address": {
+        "street": "10880 Malibu Point",
+        "postal_code": "90265",
+        "city": "Malibu",
+        "region": {
+          "region_name": "California",
+          "state": {
+            "state_name": "CA"
+          }
+        }
+      }
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a3h"},
+      "first_name": "Steve",
+      "last_name": "Rogers",
+      "age": 100,
+      "gender": "Male",
+      "email": "steve.rogers@avengers.com",
+      "phone": "555-3456",
+      "fax": "555-6789",
+      "address": {
+        "street": "569 Leaman Place",
+        "postal_code": "19147",
+        "city": "Brooklyn",
+        "region": {
+          "region_name": "New York",
+          "state": {
+            "state_name": "NY"
+          }
+        }
+      }
+    }
+  ],
+  "Orders": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a40"},
+      "orderDate": {"$date": "2023-05-01T00:00:00Z"},
+      "shipDate": {"$date": "2023-05-03T00:00:00Z"},
+      "customer_id": {"$oid": "60c72b2f9f1b2c6d88f60a3e"},
+      "orderDetails": [
+        {
+          "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a41"},
+          "quantity": 1,
+          "total": 500.00,
+          "discount": 50.00,
+          "profit": 100.00
+        }
+      ],
+      "segment": "Consumer",
+      "shipMode": "Second Class"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a42"},
+      "orderDate": {"$date": "2023-06-02T00:00:00Z"},
+      "shipDate": {"$date": "2023-06-04T00:00:00Z"},
+      "customer_id": {"$oid": "60c72b2f9f1b2c6d88f60a3f"},
+      "orderDetails": [
+        {
+          "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a43"},
+          "quantity": 3,
+          "total": 1500.00,
+          "discount": 150.00,
+          "profit": 300.00
+        }
+      ],
+      "segment": "Corporate",
+      "shipMode": "First Class"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a57"},
+      "orderDate": {"$date": "2023-07-10T00:00:00Z"},
+      "shipDate": {"$date": "2023-07-12T00:00:00Z"},
+      "customer_id": {"$oid": "60c72b2f9f1b2c6d88f60a3h"},
+      "orderDetails": [
+        {
+          "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a41"},
+          "quantity": 2,
+          "total": 1000.00,
+          "discount": 100.00,
+          "profit": 200.00
+        }
+      ],
+      "segment": "Consumer",
+      "shipMode": "Same Day"
+    }
+  ],
+  "Products": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a41"},
+      "product_name": "Spider-Man Suit",
+      "supplier_id": {"$oid": "60c72b2f9f1b2c6d88f60a44"},
+      "category": {
+        "category_name": "Costumes",
+        "subCategory": {
+          "subCategory_name": "Superhero Suits"
+        }
+      },
+      "unit_price": 500.00,
+      "units_in_stock": 20
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a43"},
+      "product_name": "Iron Man Armor",
+      "supplier_id": {"$oid": "60c72b2f9f1b2c6d88f60a44"},
+      "category": {
+        "category_name": "Armor",
+        "subCategory": {
+          "subCategory_name": "High-Tech Armor"
+        }
+      },
+      "unit_price": 5000.00,
+      "units_in_stock": 5
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a58"},
+      "product_name": "Captain America Shield",
+      "supplier_id": {"$oid": "60c72b2f9f1b2c6d88f60a44"},
+      "category": {
+        "category_name": "Weapons",
+        "subCategory": {
+          "subCategory_name": "Shields"
+        }
+      },
+      "unit_price": 1000.00,
+      "units_in_stock": 10
+    }
+  ],
+  "Reviews": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a45"},
+      "customer_id": {"$oid": "60c72b2f9f1b2c6d88f60a3e"},
+      "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a41"},
+      "rating": 4.8,
+      "review_text": "Amazing suit, very flexible and durable!",
+      "review_date": {"$date": "2023-05-05T00:00:00Z"}
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a46"},
+      "customer_id": {"$oid": "60c72b2f9f1b2c6d88f60a3f"},
+      "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a43"},
+      "rating": 4.9,
+      "review_text": "The best armor money can buy!",
+      "review_date": {"$date": "2023-06-06T00:00:00Z"}
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a59"},
+      "customer_id": {"$oid": "60c72b2f9f1b2c6d88f60a3h"},
+      "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a58"},
+      "rating": 5.0,
+      "review_text": "A fantastic shield with great durability!",
+      "review_date": {"$date": "2023-07-15T00:00:00Z"}
+    }
+  ],
+  "Suppliers": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a44"},
+      "company_name": "Stark Industries",
+      "phone": "555-1234",
+      "email": "supplies@starkindustries.com",
+      "fax": "555-5678"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a60"},
+      "company_name": "Pym Technologies",
+      "phone": "555-7890",
+      "email": "supplies@pymtechnologies.com",
+      "fax": "555-1235"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a66"},
+      "company_name": "Oscorp",
+      "phone": "555-5678",
+      "email": "supplies@oscorp.com",
+      "fax": "555-8765"
+    }
+  ],
+  "Categories": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a47"},
+      "category_name": "Costumes",
+      "category_description": "Outfits for heroes and villains."
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a48"},
+      "category_name": "Armor",
+      "category_description": "Protective gear and suits."
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a61"},
+      "category_name": "Weapons",
+      "category_description": "Advanced weaponry."
+    }
+  ],
+  "SubCategories": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a49"},
+      "category_id": {"$oid": "60c72b2f9f1b2c6d88f60a47"},
+      "subCategory_name": "Superhero Suits",
+      "subCategory_description": "Suits worn by superheroes."
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a50"},
+      "category_id": {"$oid": "60c72b2f9f1b2c6d88f60a48"},
+      "subCategory_name": "High-Tech Armor",
+      "subCategory_description": "Advanced protective suits."
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a62"},
+      "category_id": {"$oid": "60c72b2f9f1b2c6d88f60a61"},
+      "subCategory_name": "Shields",
+      "subCategory_description": "Protective shields for combat."
+    }
+  ],
+  "Segments": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a51"},
+      "description": "Consumer"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a52"},
+      "description": "Corporate"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a63"},
+      "description": "Government"
+    }
+  ],
+  "ShipModes": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a53"},
+      "description": "First Class"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a54"},
+      "description": "Second Class"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a64"},
+      "description": "Same Day"
+    }
+  ],
+  "Stocks": [
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a55"},
+      "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a41"},
+      "quantity_available": 20,
+      "reorder_level": 5,
+      "reorder_quantity": 10,
+      "warehouse_location": "A1"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a56"},
+      "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a43"},
+      "quantity_available": 5,
+      "reorder_level": 2,
+      "reorder_quantity": 3,
+      "warehouse_location": "B2"
+    },
+    {
+      "_id": {"$oid": "60c72b2f9f1b2c6d88f60a65"},
+      "product_id": {"$oid": "60c72b2f9f1b2c6d88f60a58"},
+      "quantity_available": 2,
+      "reorder_level": 1,
+      "reorder_quantity": 1,
+      "warehouse_location": "C3"
+    }
+  ]
+}
